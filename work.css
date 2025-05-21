@@ -1,0 +1,222 @@
+#work {
+    padding: 40px;
+    max-width: 800px; /* Matching #about section for now */
+    margin: 40px auto; /* Centering the section */
+}
+
+.project-card {
+    background-color: #f9f9f9; /* Default background, will be overridden by specific project styles */
+    border: 2px solid transparent; /* Default border */
+    border-radius: 8px;
+    margin-bottom: 36px; /* Spacing between cards, from original framer-1uj7ucx gap */
+    padding: 36px 40px; /* Inner padding, from original cards */
+    display: flex;
+    flex-direction: column; /* Default, text content will be row, image content below/beside based on original */
+    overflow: hidden; /* To contain absolutely positioned elements if any */
+    position: relative; /* For positioning child elements like logos */
+    min-height: 300px; /* Approximate height from original cards */
+}
+
+/* Specific card styles based on original framer classes */
+#project1 {
+    background-color: rgba(92, 162, 247, 0.1); /* #5ca2f71a */
+    border-color: rgba(92, 162, 247, 0.2);
+}
+
+#project2 {
+    background-color: rgba(126, 92, 215, 0.1); /* #7e5cd71a */
+    border-color: rgba(126, 92, 215, 0.2);
+}
+
+#project3 {
+    background-color: rgba(254, 104, 168, 0.1); /* #fe68a81a */
+    border-color: rgba(254, 104, 168, 0.2);
+}
+
+#project4 {
+    background-color: rgba(112, 191, 162, 0.1); /* #70bfa21a */
+    border-color: rgba(112, 191, 162, 0.2);
+}
+
+.project-card .project-text-content {
+    width: 50%; /* Allowing image to take the other half, adjust as needed */
+    /* In original, text content is often absolutely positioned (left: 40px, top: 36px) */
+    /* For a simpler flex layout, this might need adjustment or a different approach if sticking to pure flex */
+}
+
+.project-card h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3; /* 130% */
+    margin-bottom: 12px; /* Original gap */
+}
+
+.project-card .project-type {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.5; /* 150% */
+    margin-bottom: 24px; /* Original gap */
+    color: #333; /* General text color */
+}
+
+.project-card .project-link {
+    display: inline-block;
+    padding: 10px 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid;
+    /* Specific link styles will be similar to card's border/bg but more saturated */
+}
+
+/* Link specific styles */
+#project1 .project-link {
+    background-color: rgb(238, 245, 254);
+    border-color: rgb(173, 196, 233);
+    color: #3b5998; /* Darker shade of blue */
+}
+#project2 .project-link {
+    background-color: rgb(242, 239, 250);
+    border-color: rgb(179, 165, 218);
+    color: #58449b; /* Darker shade of purple */
+}
+#project3 .project-link {
+    background-color: rgb(253, 241, 247);
+    border-color: rgb(230, 175, 200);
+    color: #c34c8b; /* Darker shade of pink */
+}
+#project4 .project-link {
+    background-color: rgb(243, 248, 246);
+    border-color: rgb(183, 210, 197);
+    color: #4a7c69; /* Darker shade of green */
+}
+
+.project-card .project-link:hover {
+    opacity: 0.8; /* Simple hover effect */
+}
+
+
+.project-card .project-image-content {
+    /* In the original, images are often absolutely positioned.
+       This basic setup tries to place them to the side or below.
+       A more complex grid/flex setup within each card might be needed for exact replica. */
+    position: relative; /* context for absolutely positioned images if needed */
+    flex-grow: 1;
+    display: flex; /* to arrange multiple images */
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card .main-project-image {
+    max-width: 60%; /* Adjust as needed */
+    max-height: 250px; /* Adjust as needed */
+    object-fit: contain;
+    border-radius: 6px; /* From original image 3 */
+    margin: 5px;
+}
+#project1 .main-project-image { border: 6px solid rgba(39, 45, 76, .2); border-radius: 24px; } /* from framer-13ukvv2 */
+#project2 .main-project-image { max-width: 45%; } /* Two images side by side */
+#project3 .main-project-image { max-width: 45%; }
+#project4 .main-project-image { max-width: 80%; }
+
+
+.project-card .project-image-content .second-image {
+    /* Specific styling if needed for a second main image */
+}
+
+.project-card .project-logo {
+    position: absolute;
+    bottom: 20px; /* Adjust as per original layout */
+    left: 20px;  /* Adjust as per original layout */
+    width: 50px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Adjusting layout for cards where text is on left and image on right */
+/* This is a simplified approach. Original uses absolute positioning extensively. */
+.project-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.project-card .project-text-content {
+    width: 45%; /* Give text content some space */
+    padding-right: 20px; /* Space between text and image areas */
+}
+
+.project-card .project-image-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column; /* Stack images if multiple, or adjust */
+    align-items: center; /* Center images within their container */
+}
+
+#project1 .project-logo { left: 0; bottom: 0; width: 100px; top: auto; /* Resetting some absolute positioning for this card's logo */ }
+#project2 .project-logo, #project3 .project-logo, #project4 .project-logo {
+    left: 0px; bottom: -20px; /* Trying to mimic original framer-14isl39 style */
+    width: 50px; height: 50px;
+}
+
+/* For Project 1, the logo is below the text content area, not overlapping image */
+#project1 .project-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push link to bottom */
+    min-height: 280px; /* Ensure it has some height for logo positioning */
+}
+#project1 .project-image-content {
+    align-self: center; /* Center the image vertically in its space */
+}
+#project1 .project-logo {
+    position: relative; /* Take out of absolute flow */
+    left: 0;
+    bottom: 0;
+    margin-top: 20px; /* Space above the logo */
+}
+
+/* Project 2, 3, 4 have logo more overlaid or near bottom-left of the card */
+#project2 .project-image-content,
+#project3 .project-image-content,
+#project4 .project-image-content {
+    position: relative; /* For logo positioning */
+}
+
+#project2 .project-logo,
+#project3 .project-logo,
+#project4 .project-logo {
+    position: absolute;
+    left: 0px;
+    bottom: 0px; /* Adjust if needed */
+}
+
+/* Image specific adjustments */
+#project1 .main-project-image { max-width: 100%; }
+#project2 .main-project-image { max-width: 297px; height: 581px; object-fit: cover; }
+#project3 .main-project-image { max-width: 280px; object-fit:cover; }
+#project3 .second-image { max-width: 280px; object-fit:cover; }
+#project4 .main-project-image { max-width: 464px; object-fit: contain; }
+
+
+/* Make cards stack on smaller screens */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+    }
+    .project-card .project-text-content,
+    .project-card .project-image-content {
+        width: 100%;
+        padding-right: 0;
+    }
+    .project-card .project-image-content {
+        margin-top: 20px; /* Space between text and image when stacked */
+    }
+    .project-card .project-logo {
+        position: static; /* Reset positioning for stacked layout */
+        margin-top: 10px;
+    }
+}

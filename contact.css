@@ -1,0 +1,45 @@
+footer {
+    padding: 20px 40px; /* Match header padding for consistency */
+    max-width: 100%; /* Footer usually spans full width */
+    margin: 40px auto 0 auto; /* Margin above, centered */
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-divider {
+    height: 2px; /* From original: height:2px */
+    background-color: rgba(0, 0, 0, 0.1); /* From original: background-color:#0000001a */
+    margin-bottom: 20px; /* Space between divider and content */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Copyright on left, LinkedIn on right */
+    align-items: center;
+    padding: 26px 80px; /* Original padding: 26px 120px, adjusted for less overall width */
+    max-width: 1200px; /* To keep content from being too spread out on very wide screens */
+    margin: 0 auto; /* Center the content area */
+}
+
+.footer-content .copyright,
+.footer-content .linkedin-link {
+    font-size: 16px; /* Approximated from original, p has --font-selector:R0Y7Um9ib3RvLTUwMA== */
+    font-weight: 500; /* From original */
+    color: #000; /* From original */
+}
+
+.footer-content .linkedin-link {
+    text-decoration: none; /* Links in footers often have no underline */
+}
+
+.footer-content .linkedin-link:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px; /* Add some space when stacked */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}

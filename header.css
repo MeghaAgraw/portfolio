@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Adjusted padding */
+    background-color: #fff; /* Changed to white like in original */
+    border-bottom: 1px solid #e5e5e5; /* Adjusted border color */
+}
+
+.logo {
+    font-size: 20px; /* Adjusted to match original text */
+    font-weight: 700; /* Adjusted to match original text */
+    color: #111; /* Added color to match original */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 24px; /* Adjusted to match original spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Adjusted to match original text */
+    font-weight: 500; /* Adjusted to match original text */
+    font-size: 16px; /* Added font size to match original (approximated) */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Added underline on hover to match common practice */
+    color: #000; /* Kept color black on hover as per original (no specific hover color change noted) */
+}
